@@ -5,6 +5,7 @@ elegilegi.load = function (key) {
 		'type': 'GET',
 		'url': 'data/' + key + '.csv',
 		'dataType': 'text',
+		'async': false,
 		'success': function (rawData) {
 			elegilegi.data[key] = CSVToMap(rawData);
 		}
@@ -91,7 +92,6 @@ function reset() {
 	elegilegi.currentGame = new Game();
 	$('#intro').css('display', 'block');
 	$('#about').css('display', 'none');
-	$('#options').css('display', 'none');
 	$('#voting').css('display', 'none');
 	$('#results').css('display', 'none');
 }
@@ -100,7 +100,7 @@ function startGame(n) {
 	var g = elegilegi.currentGame;
 	g.projectCount = n;
 	g.projectIds = shuffle(elegilegi.projectIds.slice(0, n));
-	$('#options').fadeOut(200, loadRandomProject);
+	loadRandomProject();
 }
 
 function loadRandomProject() {
@@ -451,11 +451,6 @@ $(document).ready(function () {
 	elegilegi.load('elegilegi-votaciones-diputados');
 	elegilegi.load('elegilegi-votaciones-senado');
 	// TODO: only set the following event handler when all data is loaded
-	$('#start').click(function () {
-		$('#intro').fadeOut(200, function () {
-			$('#options').fadeIn(100);
-		});
-	});
 
 	$(document).ajaxError(function (evnt, jqxhr, options, e) {
 		alert('Error al cargar datos de: ' + options.url
@@ -517,6 +512,9 @@ $(document).ready(function () {
 	$('#back').click(function () { $('#about').slideToggle(500); });
 	$('#reset').click(reset);
 	reset();
+	$('#intro').fadeOut(200);
+	startGame(20);
+
 });
 
 function truncate(s, maxlen) {
