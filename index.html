@@ -6,54 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <title>Reformulate</title>
 </head>
-<body style="background-color: #011627">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="./index.html">
+<body id="body" style="height: 100vh !important; background-size: cover; background-image: linear-gradient(to bottom,  rgba(141, 48, 209, 0.30), rgba(22, 22, 149, 0.30)), url(./LMM-Cover-Images-2.jpg)">
+    <div class="text-center container-fluid" style="height: 100vh;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#a11fff, #092991);">
+        <div class="col-12 text-center">  
+            <img style="margin: 100px auto 0px auto; width: 80%; max-width: 300px;" class="d-flex justify-content-center fixed-top wow fadeInUp" src="./logo.png">
+        </div> 
+        <div class="col-12 text-center ">  
+            <img style="margin: 0px auto 100px auto; width: 80%; max-width: 500px;" class="d-flex justify-content-center fixed-bottom wow fadeInUp" src="./66148 [Convertido].png">
+        </div> 
+
+    </div>
+
+        <script>
+        window.onload=loader();
+        function loader() {
+            setTimeout(function(){
+                $("body").html(`<div class="text-center container-fluid" style="height: 100vh;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#a11fff, #092991);">
+        <div class="col-12 text-center">  
+            <img style="margin: 100px auto 0px auto; width: 80%; max-width: 300px;" class="d-flex justify-content-center fixed-top wow fadeOut" src="./logo.png">
+        </div> 
+        <div class="col-12 text-center ">  
+            <img style="margin: 0px auto 100px auto; width: 80%; max-width: 500px;" class="d-flex justify-content-center fixed-bottom wow fadeOut" src="./66148 [Convertido].png">
+        </div> 
+
+    </div>`);
+            }, 2000);
+            setTimeout(function(){
+                $("body").html(`<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand" href="./index.html" style="font-family: 'Poppins', sans-serif; font-weight: bold;">
             Reformulate
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Partidos <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Noticias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Gráficos</a>
-                </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li> -->
-            </ul>
-        </div>
-    </nav>
+       
+    </nav> <div class="container-fluid mt-4">
+        <div class="col-12 text-center">  
+            <img style="margin: 100px auto 0px auto; width: 80%; max-width: 300px;" class="d-flex justify-content-center fixed-top" src="./logo.png">
+        </div> 
 
-    <div class="container-fluid mt-4">
-        <div class="d-flex justify-content-center">
-            <h1 style="color:red;">Logo</h1>
-        </div>
-
-        <div class="d-flex justify-content-center">
-            <div class="align-self-center" style="color:red; padding-top:15vh;">Descripción...</div>
+        <div class="d-flex justify-content-center fixed-bottom p-5">
+            <div class="align-self-center" style="color:white ; margin-bottom: 20vh; font-size: 30px; font-family: 'Poppins', sans-serif ;"><strong>Te invitamos a reformularte y crear tu opinión política</strong></div>
         </div>
 
         <div class="d-flex justify-content-center fixed-bottom mb-4">
-                <!-- <a class="btn"  style="background-color: rgb(47, 141, 132)" disabled>+ información</a> -->
-            <a href="./elecciones.html" class="btn text-light"  style="background-color: rgb(47, 141, 132); font-size: 28px;" >Comenzar</button></a>
+            <a href="./elecciones.html" class="btn text-light p-2 shadow"  style="margin-bottom: 10vh; background-color: #26dec1; font-size: 20px; border-radius: 50px; font-family: 'Poppins', sans-serif ;" ><strong>ANIMATE A CONSTRUIR TU VOTO!</strong></button></a>
         </div>
-    </div>
-
+    </div>`);
+            }, 3000);
+        }
+    
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

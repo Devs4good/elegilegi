@@ -281,7 +281,7 @@ function printResults() {
 	var rows = $('#rows');
 	rows.empty();
 	var tuples = sortResults();
-	for (var i = 0; i < tuples.length; i++) {
+	for (var i = 0; i < 4; i++) {
 		var r = tuples[i];
 		var tr = document.createElement('tr');
 		$(tr).attr('id', r.id).addClass(r.camara.toLowerCase());
@@ -305,12 +305,12 @@ function printResults() {
 		printResultsHelper(tr, r.coincidences)
 			.on('mouseover', showTooltip)
 			.on('mouseout', hideTooltip);
-		printResultsHelper(tr, r.discrepancies)
-			.on('mouseover', showTooltip)
-			.on('mouseout', hideTooltip);
-		printResultsHelper(tr, r.difference)
-			.on('mouseover', showTooltip)
-			.on('mouseout', hideTooltip);
+		// printResultsHelper(tr, r.discrepancies)
+		// 	.on('mouseover', showTooltip)
+		// 	.on('mouseout', hideTooltip);
+		// printResultsHelper(tr, r.difference)
+		// 	.on('mouseover', showTooltip)
+		// 	.on('mouseout', hideTooltip);
 		rows.append(tr);
 	}
 	render(tuples);
