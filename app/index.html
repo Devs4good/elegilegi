@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <title>Reformulate</title>
@@ -79,72 +79,80 @@
 	<p id="progress-status" class="shady text-center">Completado: 0 / 40</p>
 	<p id="progress-bar"><span></span></p>
 </div>
-<div id="results"  class="container" style="font-family: 'Poppins', sans-serif; background-image: linear-gradient(#a11fff, #092991) !important; min-height: 100vh; height: 100%;">
-	<p class="text-light">Estos son los legisladores listados por coincidencias y discrepancias con tus votos.</p>
-	<p>
-		<select id="district" class="btn btn-light col-12 mb-1">
-			<option value="" selected="selected">Todos los distritos</option>
-			<option value="Buenos Aires">Buenos Aires</option>
-			<option value="Cdad.Aut.Bs.As.">CABA</option>
-			<option value="Catamarca">Catamarca</option>
-			<option value="Chaco">Chaco</option>
-			<option value="Chubut">Chubut</option>
-			<option value="Corrientes">Corrientes</option>
-			<option value="C&oacute;rdoba">C&oacute;rdoba</option>
-			<option value="Entre R&iacute;os">Entre R&iacute;os</option>
-			<option value="Formosa">Formosa</option>
-			<option value="Jujuy">Jujuy</option>
-			<option value="La Pampa">La Pampa</option>
-			<option value="La Rioja">La Rioja</option>
-			<option value="Mendoza">Mendoza</option>
-			<option value="Misiones">Misiones</option>
-			<option value="Neuqu&eacute;n">Neuqu&eacute;n</option>
-			<option value="R&iacute;o Negro">R&iacute;o Negro</option>
-			<option value="Salta">Salta</option>
-			<option value="San Juan">San Juan</option>
-			<option value="San Luis">San Luis</option>
-			<option value="Santa Cruz">Santa Cruz</option>
-			<option value="Santa Fe">Santa Fe</option>
-			<option value="Santiago del Estero">Santiago del Estero</option>
-			<option value="Tierra del Fuego">Tierra del Fuego, Ant...</option>
-			<option value="Tucum&aacute;n">Tucum&aacute;n</option>
-		</select>
-		<select id="house" class="btn btn-light col-12 mb-1">
-			<option value="" selected="selected">Ambas c&aacute;maras</option>
-			<option value="Diputados">S&oacute;lo diputados</option>
-			<option value="Senado">S&oacute;lo senadores</option>
-		</select>
-		<select id="relevance" class="btn btn-light col-12 mb-1">
-			<option value="0" selected="selected">Cualquier participaci&oacute;n</option>
-			<option value="25">M&aacute;s del 25%</option>
-			<option value="50">M&aacute;s del 50%</option>
-		</select>
-		<select id="order" class="btn btn-light col-12 mb-1">
-			<option value="name">Ordenar por nombre</td>
-			<option value="chance">Ordenar por chance de coincidir</td>
-			<option value="participation">Ordenar por participaci&oacute;n</td>
-			<option value="coincidences">Ordenar por coincidencias</td>
-			<option value="discrepancies">Ordenar por discrepancias</td>
-			<option value="difference" selected="selected">Ordenar por diferencia</td>
-		</select>
-	</p>
-	<table id='customers' class="bg-light">
-		<thead>
-			<tr>
-				<td id="name">Legislador</td>
-				<td class="center" id="chance">Chance de coincidir</td>
-				<td class="center" id="participation">Participaci&oacute;n</td>
-				<td class="center" id="coincidences">Coincidencias</td>
-				<!-- <td class="center" id="discrepancies">Discrepancias</td>
-				<td class="center" id="difference">Diferencia</td> -->
-			</tr>
-		</thead>
-		<tbody id="rows">
-		</tbody>
-	</table>
-	<div id="chart"></div>
-	<!-- <p class="center"><a id="reset" class="action" href="javascript:void(0);">Volver a empezar</a></p>
-	<p class="center">&iquest;Quer&eacute;s ayudar a un amigo que no sabe qu&eacute; votar?<br />&iexcl;Sos libre de compartir este link!<br /><a class="facebook" href="javascript:void(0);">Facebook</a> - <a class="twitter" href="javascript:void(0);">Twitter</a> - <a class="whatsapp" href="javascript:void(0);">Whatsapp</a></p> -->
+<div id="results" class="container" style="font-family: 'Poppins', sans-serif; background-image: linear-gradient(#a11fff, #092991) !important; min-height: 100vh; height: 100%;">
+    <p class="text-light">Estos son los legisladores listados por coincidencias y discrepancias con tus votos.</p>
+    <p>
+        <select id="district" class="btn btn-light col-12 mb-1">
+            <option value="" selected="selected">Todos los distritos</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Cdad.Aut.Bs.As.">CABA</option>
+            <option value="Catamarca">Catamarca</option>
+            <option value="Chaco">Chaco</option>
+            <option value="Chubut">Chubut</option>
+            <option value="Corrientes">Corrientes</option>
+            <option value="C&oacute;rdoba">C&oacute;rdoba</option>
+            <option value="Entre R&iacute;os">Entre R&iacute;os</option>
+            <option value="Formosa">Formosa</option>
+            <option value="Jujuy">Jujuy</option>
+            <option value="La Pampa">La Pampa</option>
+            <option value="La Rioja">La Rioja</option>
+            <option value="Mendoza">Mendoza</option>
+            <option value="Misiones">Misiones</option>
+            <option value="Neuqu&eacute;n">Neuqu&eacute;n</option>
+            <option value="R&iacute;o Negro">R&iacute;o Negro</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="San Luis">San Luis</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Santa Fe">Santa Fe</option>
+            <option value="Santiago del Estero">Santiago del Estero</option>
+            <option value="Tierra del Fuego">Tierra del Fuego, Ant...</option>
+            <option value="Tucum&aacute;n">Tucum&aacute;n</option>
+        </select>
+        <select id="house" class="btn btn-light col-12 mb-1">
+            <option value="" selected="selected">Ambas c&aacute;maras</option>
+            <option value="Diputados">S&oacute;lo diputados</option>
+            <option value="Senado">S&oacute;lo senadores</option>
+        </select>
+        <select id="relevance" class="btn btn-light col-12 mb-1">
+            <option value="0" selected="selected">Cualquier participaci&oacute;n</option>
+            <option value="25">M&aacute;s del 25%</option>
+            <option value="50">M&aacute;s del 50%</option>
+        </select>
+        <select id="order" class="btn btn-light col-12 mb-1">
+            <option value="name">Ordenar por nombre</td>
+            <option value="chance">Ordenar por chance de coincidir</td>
+            <option value="participation">Ordenar por participaci&oacute;n</td>
+            <option value="coincidences">Ordenar por coincidencias</td>
+            <option value="discrepancies">Ordenar por discrepancias</td>
+            <option value="difference" selected="selected">Ordenar por diferencia</td>
+        </select>
+    </p>
+    <table id='customers' class="bg-light">
+        <thead>
+            <tr>
+                <td id="name">Legislador</td>
+                <td class="center" id="chance">Chance de coincidir</td>
+                <td class="center" id="participation">Participaci&oacute;n</td>
+                <td class="center" id="coincidences">Coincidencias</td>
+                <!-- <td class="center" id="discrepancies">Discrepancias</td>
+                <td class="center" id="difference">Diferencia</td> -->
+            </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+    </table>
+    <div id="chart" style="background: white;"></div>
+    <div class="mt-2">
+        <a href="../elecciones.html">
+            <button style="background: #29F7D7;border-color: #29F7D7;border-radius: 15px; margin-top:8px !important;" type="button" class="btn col-12 btn-secondary">
+                <strong style="
+            font-size: 28px;
+        ">Volver a empezar</strong>
+            </button>
+        </a>
+    </div>
+    <!-- <p class="center"><a id="reset" class="action" href="javascript:void(0);">Volver a empezar</a></p>
+    <p class="center">&iquest;Quer&eacute;s ayudar a un amigo que no sabe qu&eacute; votar?<br />&iexcl;Sos libre de compartir este link!<br /><a class="facebook" href="javascript:void(0);">Facebook</a> - <a class="twitter" href="javascript:void(0);">Twitter</a> - <a class="whatsapp" href="javascript:void(0);">Whatsapp</a></p> -->
 </div>
 <style>
 		#customers {
